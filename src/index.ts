@@ -10,6 +10,10 @@ app.use(express.json())
 
 app.use('/api/todos', todoRoutes)
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Todos API is running!' })
+})
+
 const PORT = 3001
 const MONGO_URI = 'mongodb://localhost:27017/todos'
 
